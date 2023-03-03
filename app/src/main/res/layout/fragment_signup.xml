@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="registerViewModel"
+            type="com.example.dailytasks.RegisterViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCE4EC"
+        tools:context=".MainActivity">
+
+
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/UserName2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rectangle_2"
+            android:ems="10"
+            android:hint="نام کاربری"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="@{registerViewModel.loginUsername}"
+            android:textColorHint="#D81B60"
+            android:textDirection="rtl"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Password2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle_2"
+            android:ems="10"
+            android:hint="رمزعبور"
+            android:inputType="numberPassword"
+            android:text="@{registerViewModel.loginPassword}"
+            android:textColorHint="#D81B60"
+            android:textDirection="rtl"
+            android:textAlignment="textEnd"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserName2"
+            android:padding="5dp"/>
+
+        <Button
+            android:id="@+id/singUp2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/rectangle_2"
+            android:text="Sing up"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.738" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
