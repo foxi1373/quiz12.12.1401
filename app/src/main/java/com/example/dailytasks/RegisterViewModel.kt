@@ -20,7 +20,8 @@ class RegisterViewModel : ViewModel() {
     }
 
 
-    fun isNull(): MutableLiveData<Boolean> = MutableLiveData(signupUsername.value == null && signupPassword.value == null)
+    fun isNull(): MutableLiveData<Boolean> =
+        MutableLiveData(signupUsername.value == null || signupUsername.value == "" || signupPassword.value == null || signupPassword.value == "")
 
     fun isCorrect(): Boolean =
         loginPassword.value == signupPassword.value && loginUsername.value == signupUsername.value
@@ -28,7 +29,6 @@ class RegisterViewModel : ViewModel() {
     fun makeToast(toast: Toast) {
         toast.show()
     }
-
 
 
 }

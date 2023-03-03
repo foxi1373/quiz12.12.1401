@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add<LoginFragment>(R.id.fragment_container_view)
+                addToBackStack(null)
             }
         }
     }

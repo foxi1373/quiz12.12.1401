@@ -3,8 +3,6 @@ package com.example.dailytasks
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.fragment.app.*
 import com.example.dailytasks.databinding.FragmentLoginBinding
 
